@@ -38,7 +38,8 @@ spec:
           name: db-volume
       volumes:
       - name: db-volume
-        emptyDir: {}
+        persistentVolumeClaim:
+          claimNAme: mysql-pv-claim
       - name: db-init
         emptyDir: {}
 ---
